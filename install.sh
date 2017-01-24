@@ -12,7 +12,7 @@ fi
 vim --version > /dev/null 2>&1
 if [ $? -ne 0 ]
 then
-  echo "vim is not installed, installing vim..."
+  echo "[INFO] vim is not installed, installing vim..."
   brew install vim
   brew install reattach-to-user-namespace
   brew install the_silver_searcher
@@ -21,21 +21,32 @@ fi
 # install Vundle
 if [ ! -d ~/.vim/bundle/Vundle.vim ]
 then
-  echo "Vundle.vim is not installed, installing Vundle.vim..."
+  echo "[INFO] Vundle.vim is not installed, installing Vundle.vim..."
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
 # clone repo
-if [ ! -d ~/.vim-config ]
+USER_NAME=Chun-Yang
+if [ -d ~/.vim-config ]
 then
-  echo "vim-config is not installed, installing vim-config..."
-  git clone https://github.com/Chun-Yang/vim-config ~/.vim-config
+  echo "[INFO] vim-config is installed, updating now..."
+  git -C ~/.vim-config pull git@github.com:${USER_NAME}/vim-config.git
+else
+  echo "[INFO] vim-config is not installed, installing vim-config..."
+  git clone https://github.com/${USER_NAME}/vim-config ~/.vim-config
 fi
 
-# replace vimrc file
+# link .vimrc file
 if [ -f ~/.vimrc ]
 then
-  echo "existing .vimrc file is moved to .vimrc.backup"
-  mv ~/.vimrc ~/.vimrc.backup
+  if [ "`readlink ~/.vimrc`" != "`ls ~/.vim-config/.vimrc`" ]
+  then
+    echo "[INFO] existing .vimrc file is moved to .vimrc.backup"
+    mv ~/.vimrc ~/.vimrc.backup
+    echo "[INFO] link ~/.vim-config/.vimrc to ~/.vimrc"
+    ln -s ~/.vim-config/.vimrc ~/.vimrc
+  fi
+else
+  echo "[INFO] link ~/.vim-config/.vimrc to ~/.vimrc"
+  ln -s ~/.vim-config/.vimrc ~/.vimrc
 fi
-ln -s ~/.vim-config/.vimrc ~/.vimrc
