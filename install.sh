@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # installed brew
 brew --version > /dev/null 2>&1
 if [ $? -ne 0 ]
@@ -17,21 +19,21 @@ then
 fi
 
 # install Vundle
-if [ ! -d '~/.vim/bundle/Vundle.vim' ]
+if [ ! -d ~/.vim/bundle/Vundle.vim ]
 then
   echo "Vundle.vim is not installed, installing Vundle.vim..."
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
 # clone repo
-if [ ! -d '~/.vim-config' ]
+if [ ! -d ~/.vim-config ]
 then
   echo "vim-config is not installed, installing vim-config..."
   git clone https://github.com/Chun-Yang/vim-config ~/.vim-config
 fi
 
 # replace vimrc file
-if [ -f '~/.vimrc' ]
+if [ -f ~/.vimrc ]
 then
   echo "existing .vimrc file is moved to .vimrc.backup"
   mv ~/.vimrc ~/.vimrc.backup
