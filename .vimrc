@@ -45,7 +45,6 @@ source ~/.vim-config/plugins/vim-sort-motion.vimrc
 source ~/.vim-config/plugins/CamelCaseMotion.vimrc
 source ~/.vim-config/plugins/clever-f.vimrc
 source ~/.vim-config/plugins/vim-easymotion.vimrc
-" NOTE: enhance %
 source ~/.vim-config/plugins/matchit.vimrc
 source ~/.vim-config/plugins/vim-unimpaired.vimrc
 
@@ -89,13 +88,11 @@ source ~/.vim-config/plugins/vim-colors.vimrc
 " apperance
 source ~/.vim-config/plugins/vim-airline.vimrc
 source ~/.vim-config/plugins/vim-airline-themes.vimrc
-" NOTE: show line number with relative and absolute number
 source ~/.vim-config/plugins/numbers.vimrc
 
 " syntax
 source ~/.vim-config/plugins/vim-indent-guides.vimrc
 source ~/.vim-config/plugins/tabular.vimrc
-" NOTE: autoformat use :Autoformat to autoformat
 source ~/.vim-config/plugins/vim-autoformat.vimrc
 source ~/.vim-config/plugins/syntastic.vimrc
 
