@@ -2,6 +2,7 @@ Bundle 'tpope/vim-fugitive'
 
 autocmd VimEnter * unmap! <c-g>S
 autocmd VimEnter * unmap! <c-g>s
+" use ctrl-g to save and 'git add' the current file
 inoremap <silent> <c-g> <Esc>l::GitGutterDisable<CR>:Gwrite<CR>:GitGutterEnable<CR>
 nnoremap <silent> <c-g> :GitGutterDisable<CR>:Gwrite<CR>:GitGutterEnable<CR>
 

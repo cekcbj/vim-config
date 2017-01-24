@@ -1,3 +1,4 @@
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 Bundle 'airblade/vim-gitgutter'
 
 let g:gitgutter_enabled = 1
