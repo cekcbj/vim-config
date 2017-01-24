@@ -14,8 +14,6 @@ if [ $? -ne 0 ]
 then
   echo "[INFO] vim is not installed, installing vim..."
   brew install vim
-  brew install reattach-to-user-namespace
-  brew install the_silver_searcher
 fi
 
 # install Vundle
