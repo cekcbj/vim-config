@@ -11,5 +11,7 @@ function VimuxRunCurrentFile()
   endif
 endfunction
 
+" use <leader>r to run current file in a tmux panel
 nmap <leader>r :call VimuxRunCurrentFile()<cr>
+" use <leader>l to run last tmux command
 nmap <leader>l :VimuxRunLastCommand<cr>

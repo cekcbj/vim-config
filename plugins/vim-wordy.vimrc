@@ -1,1 +1,0 @@
-Bundle 'reedes/vim-wordy'
