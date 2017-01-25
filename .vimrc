@@ -25,7 +25,6 @@ source ~/.vim-config/plugins/vim-textobj-indent.vimrc
 source ~/.vim-config/plugins/vim-textobj-entire.vimrc
 source ~/.vim-config/plugins/vim-textobj-sentence.vimrc
 source ~/.vim-config/plugins/vim-textobj-quote.vimrc
-source ~/.vim-config/plugins/vim-wordy.vimrc
 source ~/.vim-config/plugins/vim-textobj-anyblock.vimrc
 source ~/.vim-config/plugins/vim-textobj-chunk.vimrc
 source ~/.vim-config/plugins/vim-multiple-cursors.vimrc
