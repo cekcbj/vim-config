@@ -1,3 +1,5 @@
+" enable ag search inside of vim
+" EXAMPLE: Ag: ag.vim will show you a list of ag.vim
 Bundle 'rking/ag.vim'
-" us AG as an alias of Ag
+" use AG as an alias of Ag
 :command -nargs=+ AG Ag <args>

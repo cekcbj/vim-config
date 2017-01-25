@@ -117,6 +117,5 @@ source ~/.vim-config/plugins/key-mappings-shift.vimrc
 source ~/.vim-config/plugins/key-mappings-single.vimrc
 source ~/.vim-config/plugins/backup.vimrc
 source ~/.vim-config/plugins/colorscheme.vimrc
-source ~/.vim-config/plugins/abbreviation.vimrc
 source ~/.vim-config/plugins/copy-path.vimrc
 source ~/.vim-config/plugins/ctags.vimrc
