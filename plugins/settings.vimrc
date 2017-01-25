@@ -86,6 +86,8 @@
   set nogdefault " do not substitute all occurance without g flag
 " }
 
+" Key words {
 autocmd BufNewFile,BufRead * :set iskeyword+=-
 autocmd BufNewFile,BufRead * :set iskeyword+=_
 autocmd BufNewFile,BufRead * :set iskeyword-=.
+" }
