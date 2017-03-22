@@ -37,6 +37,7 @@ source ~/.vim-config/plugins/vim-argwrap.vimrc
 source ~/.vim-config/plugins/vim-repeat.vimrc
 source ~/.vim-config/plugins/splitjoin.vimrc
 source ~/.vim-config/plugins/vim-over.vimrc
+source ~/.vim-config/plugins/vim-cycle.vimrc
 
 " motions
 source ~/.vim-config/plugins/vim-commentary.vimrc
