@@ -8,6 +8,8 @@ function VimuxRunCurrentFile()
     execute 'call VimuxRunCommand("ruby '.expand('%:p').'")'
   elseif &filetype ==? 'sh'
     execute 'call VimuxRunCommand("'.expand('%:p').'")'
+  elseif &filetype ==? 'java'
+    execute 'call VimuxRunCommand("javac '.expand('%:p').' && java '.expand('%:r').'")'
   endif
 endfunction
 
