@@ -9,7 +9,7 @@ function VimuxRunCurrentFile()
   elseif &filetype ==? 'sh'
     execute 'call VimuxRunCommand("'.expand('%:p').'")'
   elseif &filetype ==? 'java'
-    execute 'call VimuxRunCommand("javac '.expand('%:p').' && java '.expand('%:r').'")'
+    execute 'call VimuxRunCommand("javac '.expand('%:p').' && java -ea '.expand('%:r').'")'
   endif
 endfunction
 
