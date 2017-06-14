@@ -17,3 +17,19 @@ endfunction
 nmap <leader>r :call VimuxRunCurrentFile()<cr>
 " use <leader>l to run last tmux command
 nmap <leader>l :VimuxRunLastCommand<cr>
+
+function VimuxRunTestCurrentFile()
+  if &filetype ==? 'javascript' || &filetype ==? 'javascript.jsx'
+    execute 'call VimuxRunCommand("npm test '.expand('%:p').'")'
+  endif
+endfunction
+
+nmap <leader>t :call VimuxRunTestCurrentFile()<cr>
+
+function VimuxRunTestAllFiles()
+  if &filetype ==? 'javascript' || &filetype ==? 'javascript.jsx'
+    execute 'call VimuxRunCommand("npm test")'
+  endif
+endfunction
+
+nmap <leader>T :call VimuxRunTestAllFiles()<cr>

@@ -99,7 +99,6 @@ source ~/.vim-config/plugins/syntastic.vimrc
 " tmux
 source ~/.vim-config/plugins/vimux.vimrc
 source ~/.vim-config/plugins/vim-tmux-navigator.vimrc
-source ~/.vim-config/plugins/vim-turbux.vimrc
 source ~/.vim-config/plugins/tmuxline.vimrc
 
 " git
