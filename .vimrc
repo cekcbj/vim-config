@@ -6,6 +6,7 @@ source ~/.vim-config/plugins/tlib_vim.vimrc
 
 " config
 source ~/.vim-config/plugins/vim-sensible.vimrc
+source ~/.vim-config/plugins/undotree.vimrc
 
 " commands
 source ~/.vim-config/plugins/nerdtree.vimrc
@@ -75,6 +76,7 @@ source ~/.vim-config/plugins/vim-endwise.vimrc
 
 " html
 source ~/.vim-config/plugins/sparkup.vimrc
+source ~/.vim-config/plugins/vim-mustache-handlebars.vimrc
 
 " css
 source ~/.vim-config/plugins/vim-css3-syntax.vimrc
