@@ -1,1 +1,1 @@
-Bundle 'Chun-Yang/auto-pairs'
+Bundle 'jiangmiao/auto-pairs'

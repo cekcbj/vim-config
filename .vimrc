@@ -50,10 +50,10 @@ source ~/.vim-config/plugins/matchit.vimrc
 source ~/.vim-config/plugins/vim-unimpaired.vimrc
 
 " auto complete
-source ~/.vim-config/plugins/neocomplcache.vimrc
-source ~/.vim-config/plugins/neosnippet.vimrc
+source ~/.vim-config/plugins/ultisnips.vimrc
 source ~/.vim-config/plugins/vim-snippets.vimrc
 source ~/.vim-config/plugins/auto-pairs.vimrc
+source ~/.vim-config/plugins/YouCompleteMe.vimrc
 
 " javascript
 source ~/.vim-config/plugins/javascript-libraries-syntax.vimrc

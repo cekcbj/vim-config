@@ -15,3 +15,6 @@ vim +BundleInstall +BundleClean +qall
 
 ## Fork
 If you want to fork this repo, please remeber to set `USER_NAME` in `install.sh` file to yours.
+
+## TODO
+- [  ] Integrate YouCompleteMe in install.sh
