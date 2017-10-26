@@ -13,9 +13,9 @@ cnoremap <c-f> <Right>
 cnoremap <c-a> <C-b>
 
 " save using ctrl-s in insert mode
-inoremap <c-s> <Esc>:w<CR>l
-nnoremap <c-s> :w<CR>
-vnoremap <c-s> <Esc>:w<CR>
+inoremap <c-s> <Esc>:w<CR>:noh<cr>l
+nnoremap <c-s> :w<CR>:noh<cr>
+vnoremap <c-s> <Esc>:w<CR>:noh<cr>
 
 " quit
 nnoremap <c-q> :q<cr>
