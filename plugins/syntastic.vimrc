@@ -5,4 +5,4 @@ let g:syntastic_html_checkers=['']
 " let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_mode_map = {'passive_filetypes': ['sass', 'scss']}
+let g:syntastic_mode_map = {'passive_filetypes': ['sass', 'scss', 'java']}
