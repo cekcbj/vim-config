@@ -1,0 +1,10 @@
+{
+  "lib": [
+    "infer",
+    "def"
+  ],
+  "plugins": {
+    "node": {},
+    "es_modules": {}
+  }
+}

@@ -18,3 +18,4 @@ If you want to fork this repo, please remeber to set `USER_NAME` in `install.sh`
 
 ## TODO
 - [  ] Integrate YouCompleteMe in install.sh
+  .tern-config is tracked right now

@@ -48,3 +48,18 @@ else
   echo "[INFO] link ~/.vim-config/.vimrc to ~/.vimrc"
   ln -s ~/.vim-config/.vimrc ~/.vimrc
 fi
+
+# link .tern-config file
+if [ -f ~/.tern-config ]
+then
+  if [ "`readlink ~/.tern-config`" != "`ls ~/.vim-config/.tern-config`" ]
+  then
+    echo "[INFO] existing .tern-config file is moved to .tern-config.backup"
+    mv ~/.tern-config ~/.tern-config.backup
+    echo "[INFO] link ~/.vim-config/.tern-config to ~/.tern-config"
+    ln -s ~/.vim-config/.tern-config ~/.tern-config
+  fi
+else
+  echo "[INFO] link ~/.vim-config/.tern-config to ~/.tern-config"
+  ln -s ~/.vim-config/.tern-config ~/.tern-config
+fi
