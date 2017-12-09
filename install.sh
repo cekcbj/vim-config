@@ -46,7 +46,7 @@ link_file() {
     fi
   else
     echo "[INFO] link $1 to $2"
-    ln -s $1 $2
+    ln -sf $1 $2
   fi
 }
 
