@@ -4,7 +4,7 @@
 brew --version > /dev/null 2>&1
 if [ $? -ne 0 ]
 then
-  echo "brew is not installed, installing brew..."
+  echo "[INFO] brew is not installed, installing brew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -34,26 +34,26 @@ else
   git clone https://github.com/${USER_NAME}/vim-config ~/.vim-config
 fi
 
-# link .vimrc file
-if [ -f ~/.vimrc ]
-then
-  if [ "`readlink ~/.vimrc`" != "`ls ~/.vim-config/.vimrc`" ]
+link_file() {
+  if [ -e $2 ]
   then
-    echo "[INFO] existing .vimrc file is moved to .vimrc.backup"
-    mv ~/.vimrc ~/.vimrc.backup
-    echo "[INFO] link ~/.vim-config/.vimrc to ~/.vimrc"
-    ln -s ~/.vim-config/.vimrc ~/.vimrc
+    if [ "`readlink $2`" != "`ls $1`" ]
+    then
+      echo "[INFO] existing $2 file is moved to $2.backup"
+      mv $2 $2.backup
+      echo "[INFO] link $1 to $2"
+      ln -s $1 $2
+    fi
+  else
+    echo "[INFO] link $1 to $2"
+    ln -s $1 $2
   fi
-else
-  echo "[INFO] link ~/.vim-config/.vimrc to ~/.vimrc"
-  ln -s ~/.vim-config/.vimrc ~/.vimrc
-fi
+}
+
+# link .vimrc file
+link_file ~/.vim-config/.vimrc ~/.vimrc
 
 # link .tern-config file
-if [ "`readlink ~/.tern-config`" != "`ls ~/.vim-config/.tern-config`" ]
-then
-  echo "[INFO] existing .tern-config file is moved to .tern-config.backup"
-  mv ~/.tern-config ~/.tern-config.backup
-  echo "[INFO] link ~/.vim-config/.tern-config to ~/.tern-config"
-  ln -s ~/.vim-config/.tern-config ~/.tern-config
-fi
+link_file ~/.vim-config/.tern-config ~/.tern-config
+
+echo "[STATUS] SUCCESS"
